@@ -1,11 +1,11 @@
 Notes for Cohort 10
 
 Part 1:
-To keep things simple I used an X gate on the LSB (which will eventually be the target qubit for the CNOT gate) and the Hadamard gate on all other qubits. The CNOT gate works on the LSB with the control qubit being the next highest qubit. After the first two qubits the rest of them are acted upon by the Hadamard gate and then simply the identity gate.
+To keep things simple I used an X gate on the LSB (which will eventually be the target qubit for the CNOT gate) and the Hadamard gate on all other qubits. The CNOT gate works on the LSB with the control qubit being the next highest qubit. After the first two qubits the rest of them are acted upon by the Hadamard gate and then simply the identity gate. I was able to simulate 12-14 qubits this way before memory errors occured.
 
 
 Part 2:
-I might not have done this correctly since I was not able to keep the state vector in a (2,2,2,...,2) form after the CNOT gate since this caused entanglement and so it was impossible to pick out individual qubits from then on, at least for the first two qubits which were involved in the CNOT operation. The identity gate leaves the remaining bits separate. So the two LSBs are in the format of a tensor product between two column vectors and not the individual qubits. Also the qubits involved with the CNOT were converted to column vectors since I couldn't figure out how to do the tensor product of a CNOT gate and row vector of two individual bits.
+I might not have done this correctly since I was not able to keep the state vector in a (2,2,2,...,2) form after the CNOT gate since this caused entanglement and so it was impossible to pick out individual qubits from then on, at least for the first two qubits which were involved in the CNOT operation. The identity gate leaves the remaining bits separate. So the two LSBs are in the format of a tensor product between two column vectors and not the individual qubits. Also the qubits involved with the CNOT were converted to column vectors since I couldn't figure out how to do the tensor product of a CNOT gate and row vector of two individual bits. I did not find a limit on the number of qubits to run ... I stopped at 10,000.
 
 
 Bonus:
